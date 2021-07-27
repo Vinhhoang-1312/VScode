@@ -9,7 +9,7 @@ export default function App() {
   //function
   const decreaseCounter = () => { setCouter(counter +1) ; };
   const increaseCounter = () => { setCouter(counter -1) ; };
-
+//
 
   return (
     <View style={styles.container}>
