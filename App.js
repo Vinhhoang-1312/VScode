@@ -1,64 +1,42 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+
+import { Button, SafeAreaViewBase,TextInput,Alert,ScrollView,Image,SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  //properties
-  const [counter, setCouter ] = useState(0);
-  const [name, setName] = useState("This is my name");
-  //function
-  const decreaseCounter = () => { setCouter(counter +1) ; };
-  const increaseCounter = () => { setCouter(counter -1) ; };
-//
-
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
   return (
-    <View style={styles.container}>
-     <View>
-       <Text style={styles.view1}>1</Text>
-     </View>
-     <View>
-       <Text style={styles.view2}>2</Text>
-     </View>
-     <View>
-       <Text style={styles.view3}>3</Text>
-     </View>
-
-     
-    </View>
+   <SafeAreaView style={styles.container}>
+    
+     <Text >Hello World !</Text>
+     <Button 
+     title="Click me" 
+    
+     />
+    <TextInput
+        style={styles.input}
+        onChangeText={(value) => setName(value)}
+        placeholder="Enter your name ..."
+      />
+      <Text style={styles.text}>Your name is: {name}</Text>
+   </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-    flexDirection:"row-reverse",
+flex:1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  view1:{
-    flex: 2,
-    height: 100,
-    width: 100,
-    backgroundColor:"#ffff00",
-    alignContent:'center',
-    justifyContent:'center'
-  },
-  view2:{
-    flex: 2,
-    height: 100,
-    width: 100,
-    backgroundColor:"#ffff00",
-    alignContent:'center',
-    justifyContent:'center'
-  },
-  view3:{
-    flex: 2,
-    height: 100,
-    width: 100,
-    backgroundColor:"#ffff00",
-    alignContent:'center',
-    justifyContent:'center'
-  }
+    alignItems:'center',
+    justifyContent:'center',
   
+  },
+ 
+  input: {
+    height: 40,
+    width: "90%",
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
 });
