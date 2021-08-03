@@ -8,7 +8,7 @@ export default function App() {
   const [address, setAddress] = useState("");
   return (
    <SafeAreaView style={styles.container}>
-    
+    {/* //text// */}
      <Text >Hello World !</Text>
      <Button 
      title= "Click me" />
