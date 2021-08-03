@@ -11,9 +11,7 @@ export default function App() {
     
      <Text >Hello World !</Text>
      <Button 
-     title="Click me" 
-    
-     />
+     title= "Click me" />
     <TextInput
         style={styles.input}
         onChangeText={(value) => setName(value)}
