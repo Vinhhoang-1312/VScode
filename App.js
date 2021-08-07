@@ -17,7 +17,14 @@ export default function App() {
         onChangeText={(value) => setName(value)}
         placeholder="Enter your name ..."
       />
+        <TextInput
+        style={styles.input}
+        onChangeText={(value) => setAddress(value)}
+        placeholder="Enter your address ..."
+      />
       <Text style={styles.text}>Your name is: {name}</Text>
+      <Text style={styles.address}>Your address is: {address}</Text>
+      
    </SafeAreaView>
   );
 }
